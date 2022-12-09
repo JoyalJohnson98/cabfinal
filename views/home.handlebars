@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        body {
+         
+            background-size:100vw 100vh;
+            height: 100vh;
+        
+        }
+        .row{
+            display: flex;
+            justify-content: space-around;
+        }
+        .col-sm-4{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    {{>navbar}}
+    {{!-- <div class="one"> Cab Booking</div> --}}
+    <footer class="container-fluid bg-yellow text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4><a href=""><span style="color: white;">Welcome</span></a></h4>
+                    <p><span style="color:Black;"> Believe us you will be having a safe and memorable journey</span></p>
+                </div>
+
+                <div class="col-sm-4">
+                    <h4> <a href="contact.html"><span style="color: white;"> Contact Us</span> </a></h4>
+                    <p><span style="color:Black;">Phone:</span>
+                        <a class="nav-link" href="tel:+919658745855" style="color:Black">+91 8958745855</a>
+                    </p>
+                    <p><span style="color:Black;">Email:</span>
+                        <a class="nav-link" href="cabworld@gmail.com"  style="color:Black" >cabworld@gmail.com</a>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h4><a href=""><span style="color: white">About Us</span></a></h4>
+                     <p><span style="color:black;">40 Years:</span>
+                        <a class="nav-link" href="most Trusted"  style="color:black" >Most Trusted</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

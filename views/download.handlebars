@@ -1,0 +1,69 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+<nav class="navbar" style="border-radius:0%;border:none;background-color: black; color: white;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div style="height:15vh"></div>
+        </div>
+        <ul class="nav navbar-nav out">
+
+
+
+        </ul>
+    </div>
+</nav>
+<h1 class="text-center">Download Receipt</h1>
+<div class="container" id="body">
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Your booking Id :</th>
+            <td>{{dataValues.id}}</td>                                      
+        </tr>
+        <tr>
+            <th>PickUp :</th>
+            <td>{{dataValues.pickup}}</td>
+        </tr>
+        <tr>
+            <th>Destination :</th>
+            <td>{{dataValues.destination}}</td>
+        </tr>
+        <tr>
+            <th>Date Of Travelling:</th>
+            <td>{{dataValues.dot}}</td>
+        </tr>
+        <tr>
+            <th>Time Of Travelling:</th>
+            <td>{{dataValues.time}}</td>
+        </tr>
+        <tr>
+            <th> Amount:</th>
+            <td>{{dataValues.amount}}</td>
+        </tr>
+        <tr>
+            <th> No of Passenger:</th>
+            <td>{{dataValues.passenger}}</td>
+        </tr>
+      
+        
+    </table>
+</div>
+<div class="footer">
+    <center><button  class="btn btn-primary" id="download-button" name="download">Download</button></center>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const button = document.getElementById('download-button');
+    function generatePDF() {
+        // Choose the element that your content will be rendered to.
+        const element = document.getElementById('body');
+        // Choose the element and save the PDF for your user.
+        html2pdf().from(element).save();
+    }
+    button.addEventListener('click', generatePDF);
+</script>
